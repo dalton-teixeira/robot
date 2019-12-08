@@ -10,14 +10,15 @@ Library     PageObjectLibrary
 Library     SeleniumLibrary
 Library     Process
 
-#Test Teardown   Close Browser
+Test Teardown   Close Browser
 
 *** Test Cases ***
 Register account
     Given Open browser to home page
     When click on login
-    When create new account
-    When fill out customer form
+    And create new account
+    And fill out customer form
+    And Click on submit account
     Then The current page should be    MyAccountPage
 
 

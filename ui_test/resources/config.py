@@ -3,17 +3,6 @@ import sys
 
 
 class Config(object):
-    """Configuration variables for this test suite
-    This creates a variable named CONFIG (${CONFIG} when included
-    in a test as a variable file.
-    Example:
-    *** Settings ***
-    | Variable | ../resources/config.py
-    *** Test Cases ***
-    | Example
-    | | log | username: ${CONFIG}.username
-    | | log | root url: ${CONFIG}.server
-    """
 
     def __init__(self):
         _here = os.path.dirname(__file__)
@@ -24,7 +13,7 @@ class Config(object):
         self.root = os.path.abspath(os.path.join(_here, ".."))
         self.server = "http://automationpractice.com"
         self.browser = "Firefox"
-        self.delay = 0
+        self.delay = 1
 
         self.new_customer_firstname = "customer"
         self.new_customer_lastname= "test"

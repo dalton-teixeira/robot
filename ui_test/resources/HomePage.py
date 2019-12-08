@@ -3,7 +3,6 @@ from robot.libraries.BuiltIn import BuiltIn
 
 
 class HomePage(PageObject):
-    """Page Object for Home Page"""
 
     PAGE_TITLE = "My Store"
     PAGE_URL = "/"

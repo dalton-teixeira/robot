@@ -1,6 +1,5 @@
 from PageObjectLibrary import PageObject
 from selenium.webdriver.support.ui import Select
-
 from robot.libraries.BuiltIn import BuiltIn
 
 
@@ -39,7 +38,6 @@ class RegisterPage(PageObject):
         self.enter_state(config.new_customer_state)
         self.enter_zipcode(config.new_customer_zipcode)
         self.enter_mobile(config.new_customer_mobile)
-        self.click_the_submit_button()
 
     def enter_first_name(self, name):
         self.selib.input_text(self.locator.firstname, name)
@@ -82,6 +80,6 @@ class RegisterPage(PageObject):
     def enter_state(self, state):
         Select(self.selib.find_element(self.locator.state.split("=")[1])).select_by_value(state)
 
-    def click_the_submit_button(self):
+    def click_on_submit_account(self):
         with self._wait_for_page_refresh():
             self.selib.click_button(self.locator.submitAccount)

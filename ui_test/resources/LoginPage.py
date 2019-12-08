@@ -3,6 +3,7 @@ from robot.libraries.BuiltIn import BuiltIn
 from datetime import datetime
 import time
 
+
 class LoginPage(PageObject):
 
     PAGE_TITLE = "Login - My Store"
@@ -20,7 +21,6 @@ class LoginPage(PageObject):
         config.new_customer_email = email_create
         self.enter_email_create(email_create)
         self.click_the_create_account_button()
-        time.sleep(4)
 
     def enter_email_create(self, email):
         self.selib.input_text(self.locator.email_create, email)
