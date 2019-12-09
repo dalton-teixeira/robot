@@ -13,7 +13,7 @@ class Config(object):
         self.root = os.path.abspath(os.path.join(_here, ".."))
         self.server = "http://automationpractice.com"
         self.browser = "Firefox"
-        self.delay = 1
+        self.delay = 0
 
         self.new_customer_firstname = "customer"
         self.new_customer_lastname= "test"

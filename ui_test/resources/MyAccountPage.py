@@ -1,5 +1,4 @@
 from PageObjectLibrary import PageObject
-from robot.libraries.BuiltIn import BuiltIn
 
 
 class MyAccountPage(PageObject):
