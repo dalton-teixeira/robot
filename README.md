@@ -7,16 +7,16 @@ Make sure you have installed [pip](https://pip.pypa.io/en/stable/installing/)
 
 Install the following packages:
 ```
-pip install robotframework
-pip install robotframework-seleniumlibrary
-pip install webdrivermanager
+pip3 install robotframework
+pip3 install robotframework-seleniumlibrary
+pip3 install webdrivermanager
 sudo webdrivermanager firefox chrome --linkpath /usr/local/bin
 
-pip install -U requests
-pip install  robotframework-requests
-pip install --upgrade RESTinstance
-pip install --upgrade robotframework-pageobjectlibrary
-pip install jsonpath
+pip3 install -U requests
+pip3 install  robotframework-requests
+pip3 install --upgrade RESTinstance
+pip3 install --upgrade robotframework-pageobjectlibrary
+pip3 install jsonpath
 ```
 After cloning the repository, navigate to the root folder robot.
 ## Executing tests ##
