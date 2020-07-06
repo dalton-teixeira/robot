@@ -1,0 +1,22 @@
+version: '3.8'
+
+networks:
+  cart-calculator-robot-tests:
+    driver: bridge
+
+services:
+  robot:
+
+    build:
+      context: ./docker/robot/
+      network: host
+    image: robot:latest
+    volumes:
+      - ./tests:/tests
+      - ./results:/results
+      - ./framework:/framework
+    command:
+      pabot --processes 8 --console dotted --xunit TEST-outputxunit.xml --outputdir /results --variable environment:E2E --pythonpath /framework/ /tests
+    logging:
+      driver: json-file
+
